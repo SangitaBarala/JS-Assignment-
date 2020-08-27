@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>sort letters</title>
+</head>
+<body>
+<p>Use the split, join, and sort methods to write a function sortLetters that rearranges the characters in a string so that they appear in lexicographic order. 
+For example, calling sortLetters("cabbage") should return the string "aabbceg".</p><br>
+
+<script>
+	<!-- var input=prompt('enter a string') -->
+	<!-- var textSplit=input.split('') -->
+	<!-- var textSort=textSplit.sort() -->
+	<!-- var textJoin=textSort.join('') -->
+	<!-- document.write(textJoin) -->
+	function sortLetters()
+	{
+		var input=document.getElementById('name').value
+		var display=input.split('').sort().join('')
+		document.getElementById('result').innerHTML=display
+	}
+</script>
+
+<input type="text" id="name">
+<button onclick="sortLetters()">sort</button>
+<h2 id="result"></h2>
+</body>
+</html>

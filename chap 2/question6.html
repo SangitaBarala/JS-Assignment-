@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>farenheitToCelsius</title>
+</head>
+<body>
+	<p>coversion from Farenheit to celsius</p><br>
+	<input type="text" placeholder="enter value" id="value1">
+	<button onclick="farenheitToCelsius()">check</button>
+	<p id="result"></p>
+	
+	<script>
+		function farenheitToCelsius()
+		{
+			var F= Number(document.getElementById('value1').value)
+			var Celsius=5/9*(F-32)
+			document.getElementById('result').innerHTML= Celsius
+		}
+	</script>
+</body>
+</html>

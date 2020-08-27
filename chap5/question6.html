@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>align values</title>
+</head>
+<body>
+<p>create table and set values according to alignment method</p>
+<script>
+	function alignLeft(value,width)
+	{
+		var str="   "
+		for(i=1; i<=width; i++)
+		{
+			str=str+"&nbsp;&nbsp;"
+		}
+		console.log(str.length)
+		return str+value
+		<!-- var newStr=value.toString() -->
+		<!-- if(width>newStr) -->
+		<!-- { -->
+			<!-- var count=width-newStr.length -->
+			<!-- newStr=newStr+"&nbsp;&nbsp;".repeat(count) -->
+		<!-- } -->
+		<!-- return "     "+newStr -->
+	}
+	function alignRight(value,width)
+	{
+		var str="   "
+		for(i=1; i<=width; i++)
+		{
+			str="&nbsp;&nbsp;"+str
+		}
+		console.log(str.length)
+		return str+value
+		<!-- var newStr=value.toString() -->
+		<!-- if(width>newStr) -->
+		<!-- { -->
+			<!-- var count=width-newStr.length -->
+			<!-- newStr="&nbsp;&nbsp;".repeat(count)+newStr -->
+		<!-- } -->
+		<!-- return newStr -->
+	}
+	function alignCenter(value,width)
+	{
+		var str="   "
+		for(i=1; i<=width; i++)
+		{
+			str="&nbsp;&nbsp;"+str+"&nbsp;&nbsp;"
+		}
+		console.log(str.length)
+		return str+value
+		<!-- var newStr=value.toString() -->
+		<!-- if(width>newStr) -->
+		<!-- { -->
+			<!-- var count=(width-newStr.length)/2 -->
+			<!-- newStr="&nbsp;&nbsp;".repeat(count)+newStr+"&nbsp;&nbsp;".repeat(Math.ceil(count)) -->
+		<!-- } -->
+		<!-- return "      "+newStr -->
+	}
+	function table()
+	{
+		var setwidth=55
+		for(i=1; i<=10; i++)
+		{
+			var line="&nbsp;&nbsp;"
+			for(j=1; j<=10; j++)
+			{
+				line=line+alignRight(i*j,setwidth)
+			}
+			
+		}
+		document.write(line)
+	}
+	
+	
+	
+</script>
+</body>
+</html>

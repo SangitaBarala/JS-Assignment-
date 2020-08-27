@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>head n toss</title>
+</head>
+<body>
+<p>Write a function consecutiveHeads(numberNeeded) that simulates tossing<br>
+ a coin repeatedly until the specified number of heads appear consecutively.<br>
+ How many tosses will be needed to get 3 heads consecutively.</p>
+<script>
+
+
+function consecutiveHead(number)
+{
+	var possible_outcomes=['head','tail']
+	
+	
+	var found_consecutive_heads=false
+	var outcomes=[]
+	var counter=0
+	
+	while(found_consecutive_heads==false)
+	{
+		outcomes.push(possible_outcomes[Math.floor(Math.random()*possible_outcomes.length)])
+		if(counter>2)
+		{
+			if(outcomes[counter]=='head' && outcomes[counter-1]=='head' && outcomes[counter-2]=='head')
+			{
+				found_consecutive_heads=true
+			}
+		}
+			counter++		
+	
+	}
+	document.write('It took '+counter+ ' tosses to get 3 consecutive head')
+	document.write("<br>"+outcomes)
+}		
+ 
+	consecutiveHead(3)
+
+</script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>smiley face</title>
+<style>
+	#smiley
+	{
+	border: 1px solid black;
+	width: 80%;
+	height: 50%;
+	background-color:white;
+	}
+	
+</style>
+</head>
+<body>
+<p>Draw a cartoon face drawing with graphics methods and add 'mouseMove' event to rotate the pupils of eyes</p>
+	<div style="width:80%">
+	<canvas id="smiley"></canvas>
+	</div>
+	<script>
+	document.onreadystatechange=()=>{
+		if(document.readyState==='complete')
+		{
+			drawSmiley()
+		}
+	}
+	var drawSmiley=()=>
+	{
+		var canvas=document.getElementById('smiley')
+		var context=canvas.getContext("2d")
+		
+		//main face
+		var startX=140
+		var startY=75
+		var radius=60
+		var colorOfEmoji='yellow'
+		context.beginPath()
+		context.arc(startX,startY,radius,0,Math.PI*2,true)
+		context.fillStyle=colorOfEmoji
+		context.fill()
+		context.stroke()
+		context.closePath()
+		
+		//smile
+		context.beginPath()
+		context.arc(140,75,40,0,Math.PI)
+		context.stroke()
+		context.closePath()
+		
+		//left eye
+		context.beginPath()
+		context.arc(115,60,10,0,Math.PI*2)
+		context.fillStyle="white"
+		context.fill()
+		context.stroke()
+		context.closePath()
+		
+		//left eye pupil
+		context.beginPath()
+		context.arc(115,60,6,0,Math.PI*2)
+		context.fillStyle="black"
+		context.fill()
+		context.stroke()
+		context.closePath()
+		
+		//right eye
+		context.beginPath()
+		context.arc(160,60,10,0,Math.PI*2)
+		context.fillStyle="white"
+		context.fill()
+		context.stroke()
+		context.closePath()
+		
+		//right eye pupil
+		context.beginPath()
+		context.arc(160,60,6,0,Math.PI*2)
+		context.fillStyle="black"
+		context.fill()
+		context.stroke()
+		context.closePath()
+		
+	}
+</script>
+</body>
+</html>

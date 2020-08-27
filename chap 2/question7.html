@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Area of Triangle</title>
+</head>
+<body>
+	<p>calculate area of triangle by asking value of base and height from user</p><br>
+	<input type="text" placeholder="enter base" id="value1">
+	<input type="text" placeholder="enter height" id="value2">
+	<button onclick="area()">calculate</button>
+	<p id="result"></p>
+	
+	<script>
+		function area()
+		{
+			var base= Number(document.getElementById('value1').value)
+			var height= Number(document.getElementById('value2').value)
+			areaTri= base*height/2
+			document.getElementById('result').innerHTML='Area of Triangle is: '+areaTri
+		}
+	
+	</script>
+</body>
+</html>

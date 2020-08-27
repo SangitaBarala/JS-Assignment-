@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>sort letters</title>
+<script>
+	function sortTitles()
+	{
+		var string1=document.getElementById('str1').value
+		var string2=document.getElementById('str2').value
+		var comp=string1.localeCompare(string2)
+		if(comp==-1)
+		{
+			document.getElementById('result').innerHTML=string1+' comes before '+string2
+		}
+		else if(comp==0)
+		{
+			document.getElementById('result').innerHTML='Both strings are same'
+		}
+		else
+		{
+			document.getElementById('result').innerHTML=string1+' comes after '+string2
+		}
+	}	
+</script>
+</head>
+<body>
+<p>alphabetically which letter n words comes first</p>
+<input type="text" id="str1">
+<input type="text" id="str2">
+<button onclick="sortTitles()">compare</button>
+<h2 id="result"></h2>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>capitalize</title>
+<script>
+	function capitalize()
+	{
+		var string=document.getElementById('word').value
+		var string2=string.charAt(0).toUpperCase()+string.slice(1).toLowerCase()
+		document.getElementById('result').innerHTML=string2
+	}
+	
+</script>
+</head>
+<body>
+	<p>Implement a function capitalize(str) that returns a string in which the initial character is capitalized (if it is a letter) and all other<br> 
+	letters are converted to lower case; characters other than letters are not affected. For example, both capitalize("BOOLEAN") and capitalize("boolean") should return the string "Boolean".
+</p><br>
+	<input type="text" placeholder="Enter a word" id="word"><br><br>
+	<button onclick="capitalize()">check</button>
+	<h2 id="result"></h2>
+	
+</body>
+</html>

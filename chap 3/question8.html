@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>number factors</title>
+</head>
+<body>
+<p>Factors of a number</p>
+<script>
+	
+	function numberFactors(num)
+	{	
+		var factors=[]
+		for(var i=0; i<num; i++)
+		{
+			if(num%i==0)
+			{
+				factors.push(i)
+				
+			}
+		}
+		
+		return factors
+	}
+	document.write('Factors of 16= '+numberFactors(16))
+	document.write('<br>')
+	document.write('Factors of 17= '+numberFactors(17))
+	document.write('<br>')
+	document.write('Factors of 15= '+numberFactors(15))
+	document.write('<br>')
+	
+</script>
+</body>
+</html>

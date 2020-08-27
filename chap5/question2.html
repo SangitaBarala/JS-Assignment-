@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>atoms decayed</title>
+</head>
+<body>
+<p>Write a function simulateRadioactiveDecay() that models the process of radioactive decay.<br>The first parameter is the initial population of atoms;<br>
+the second is the probability that any of those atoms will decay within a year.</p><br>
+<script>
+	
+	function simulateRadioactiveDecay(atoms,decayProb)
+	{
+		var counter=1
+		var decayed=0
+		
+		while(atoms>0)
+		{
+		 var decayed=0
+		  for(var i=1; i<=atoms; i++)
+		  {
+			if(Math.random() <= decayProb)
+			{
+				decayed++
+			}
+		  }
+		
+		atoms=atoms-decayed
+		
+		
+		document.write('total atoms are '+atoms+' at the end of year '+counter)
+		document.write('<br>')
+		counter++
+		}
+		
+	}
+	
+	simulateRadioactiveDecay(10000,0.5)
+	
+</script>
+</body>
+</html>

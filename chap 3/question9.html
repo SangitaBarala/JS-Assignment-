@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>perfect number</title>
+</head>
+<body>
+<p>Find if an integer is a perfect number or not?</p>
+<script>
+	
+	function perfectNum(num)
+	{	
+		var res=0
+		for(var i=1; i<=num/2; i++)
+		{
+				if(num%i==0)
+				{
+					res=res+i
+				}
+		}
+		if(res==num && res!=0)
+		{
+			return 'True..'+num+' is a perfect number'
+		}
+		else
+		{
+			return 'False..'+num+' is not a perfect number'
+		}
+	}
+	
+	document.write(perfectNum(6))
+	document.write('<br>') 
+	document.write(perfectNum(28))
+	document.write('<br>') 
+	document.write(perfectNum(34))
+	document.write('<br>')
+	
+</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>palindrome</title>
+<script>
+	function isPalindrome()
+	{
+		var str= document.getElementById('string').value
+		var revStr= str.split("").reverse().join("")
+		if(revStr==str)
+		{
+			document.getElementById('result').innerHTML='True...its a palindrome'
+		}
+		else
+		{
+			document.getElementById('result').innerHTML='False..not a palindrome'
+		}
+	}
+	
+</script>
+</head>
+<body>
+	<p>Write a function isPalindrome() that takes a string value and operate recursively to check whether string is palindrome or not.<br>
+Palindrome string is same if we read from left to right and right to left. Eg: 'radar' </p><br>
+	<input type="text" placeholder="Enter a string" id="string"><br><br>
+	<button onclick="isPalindrome()">check</button>
+	<h2 id="result"></h2>
+	
+</body>
+</html>

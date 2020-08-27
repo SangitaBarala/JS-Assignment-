@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>fibonacci series</title>
+</head>
+<body>
+<p>Write a program to print fibonacci series</p>
+<script>
+function fib(n)
+{
+	var a,b,result
+	a=0
+	b=1
+	result=a+b
+	for(i=0; i<=n; i++)
+	{
+		document.write(result+"<br>")
+		result=a+b
+		a=b
+		b=result
+	}
+		return result
+}
+document.write(fib(5)+'<br>')	
+	
+</script>
+</body>
+</html>

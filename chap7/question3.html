@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>plural</title>
+<script>
+	function createRegularPlural()
+	{
+		var word = document.getElementById('word').value
+		if(word.endsWith('s','x','z','ch','sh'))
+		{
+			document.getElementById('result').innerHTML=word+'es'
+		}
+		else if(word.endsWith('a','e','i','o','u'+'y'))
+		{
+		document.getElementById('result').innerHTML=word+'s'
+		}
+		else if(word.endsWith('y'))
+		{
+		document.getElementById('result').innerHTML=word.replace('y', 'ies')
+		}
+		else
+		document.getElementById('result').innerHTML=word+'s'
+	}
+	
+</script>
+</head>
+<body>
+	<p>Write a function createRegularPlural()that takes string value and adds s, es, ies at the end acc. to the standard english rules. </p>
+	<input type="text" placeholder="Enter a word" id="word"><br><br>
+	<button onclick="createRegularPlural()">check</button>
+	<h2 id="result"></h2>
+	
+</body>
+</html>

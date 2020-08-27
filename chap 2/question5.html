@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>quotes</title>
+</head>
+<body>
+	<p>Write a function quote that takes a string value and adds double quotation marks at both the beginning and the end. </p>
+	<input type="text" placeholder="Enter string" id="value"><br><br>
+	<button onclick="quote()">click</button>
+	<h2 id="result"></h2>
+	
+	<script>
+		function quote()
+		{
+			var string=document.getElementById('value').value
+			document.getElementById('result').innerHTML='"'+string+'"'
+		}
+	</script>
+</body>
+</html>

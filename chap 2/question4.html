@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>prefix</title>
+<script>
+	function negate()
+	{
+		var value1= document.getElementById('value1').value
+		document.getElementById('result1').innerHTML='Resulting string is: '+'un'+value1
+	}
+	function intensify()
+	{
+		var value1= document.getElementById('value1').value
+		document.getElementById('result1').innerHTML='Resulting string is: '+'plus'+value1
+	}
+	function reinforce()
+	{
+		var value1= document.getElementById('value1').value
+		document.getElementById('result1').innerHTML='Resulting string is: '+'double'+value1
+	}
+	
+</script>
+</head>
+<body>
+	<p>Define three functions—negate, intensify, and reinforce—that take a string and add the prefixes “un”, “plus”, and “double” to that string</p>
+	<input type="text" placeholder="Enter string" id="value1"><br><br>
+	<button onclick="negate()">negate</button>
+	
+	<button onclick="intensify()">intensify</button>
+	
+	<button onclick="reinforce()">reinforce</button>
+	<h2 id="result1"></h2>
+	<!-- <h2 id="result2"></h2>  -->
+	<!-- <h2 id="result3"></h2> -->
+</body>
+</html>

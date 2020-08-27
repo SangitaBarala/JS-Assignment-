@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>digital root</title>
+</head>
+<body>
+<p>Write a function to calculate digital root of a number.The digital root of an integer n is defined as the<br>
+result of summing the digits repeatedly until only a single digit remains.</p>
+<script>
+	function digitalRoot(n)
+	{
+		var num=n.toString()
+		
+		if(num.length==2)
+		{
+			var x=parseInt(num[0])+parseInt(num[1])
+			return x
+		}
+		else if(num.length>2)
+		{
+		var y=0
+		for(var i=0; i<num.length; i++)
+		{
+			y=y+parseInt(num[i])
+		}
+		return y
+		}
+	}
+	
+	document.write(digitalRoot(63))
+	document.write('<br>')
+	document.write(digitalRoot(123))
+	
+</script>
+</body>
+</html>

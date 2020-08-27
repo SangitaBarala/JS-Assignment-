@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Remove duplicates</title>
+</head>
+<body>
+<p>Write a function removeDoubledLetters(str) that returns a new string 
+in which<br>any duplicated characters in str have been replaced by a single copy.</p>
+ <script>
+	function removeDoubledLetters(str)
+	{
+			var str1=str
+			var count=""
+			for(var i=0; i<str1.length; i++)
+			{
+				if(count.indexOf(str1.charAt(i))==-1)
+				{
+					count=count+str1[i]
+				}
+			}
+			return count
+	}
+	document.write(removeDoubledLetters('aabbbcdd'))
+	document.write('<br>')
+	document.write(removeDoubledLetters('bookkeeper'))
+	document.write('<br>')
+	document.write(removeDoubledLetters('committee'))
+ 
+</script>
+</body>
+</html>

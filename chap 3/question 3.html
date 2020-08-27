@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>integer divisibility</title>
+</head>
+<body>
+	<p>Write a program that displays the integers between 1 and 100 that are divisible by either 6 or 7 but not both.</p>
+	<input typ="text" id="num">
+	<button onclick="intfxn()">check</button>
+	<p id="result"></p>
+	
+	<script>
+		function intfxn()
+		{
+			var i=Number(document.getElementById('num').value)
+			for(var i=1; i<=100; i++)
+			{
+			if((i % 6 == 0 || i % 7 == 0) && !(i % 6 == 0 && i % 7 == 0))
+			{
+			document.getElementById('result').innerHTML=i
+			}
+			}
+		}
+	
+	</script>
+</body>
+</html>

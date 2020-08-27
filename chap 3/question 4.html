@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Reverse digits</title>
+<script>
+	function reverse()
+	{
+	 var digit = document.getElementById('digits').value
+	 document.getElementById('result').innerHTML= "Reverse of digits is "+digit.split('').reverse().join('')
+	
+	}
+
+
+</script>
+</head>
+<body>
+<br>
+	<p>Define a function that takes a number and returns a number that contains the same digits in the reverse order</p>
+	<input type="text" placeholder="enter digits" id="digits">
+	<button onclick="reverse()">click here</button>
+    <p id="result"></p>
+</body>
+</html>

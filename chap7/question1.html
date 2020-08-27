@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>endsWith</title>
+<script>
+	function endsWith()
+	{
+		var str = document.getElementById('value1').value
+		
+		if(str.endsWith('less'))
+		{
+			document.getElementById('result').innerHTML='True'
+		}
+		else
+		{
+			document.getElementById('result').innerHTML='False'
+		}
+	}
+	
+</script>
+</head>
+<body>
+	<p>write a function to check whether a string is appended by any specific suffix eg: painless here 'less' is suffix</p>
+	<input type="text" placeholder="Enter string" id="value1"><br><br>
+	<button onclick="endsWith()">click</button>
+	<h2 id="result"></h2>
+	
+</body>
+</html>

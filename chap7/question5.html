@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>capitalize</title>
+<script>
+	function addComma()
+	{
+		var string=Number(document.getElementById('num').value)
+		document.getElementById('result').innerHTML=string.toLocaleString()
+	}
+	
+</script>
+</head>
+<body>
+<p>Write a function that takes a string of decimal digits representing a number and returns the <br>string formed by
+ inserting commas at every third position, starting on the right.</p>	
+	<input type="text" placeholder="Enter a value" id="num"><br><br>
+	<button onclick="addComma()">check</button>
+	<h2 id="result"></h2>
+	
+</body>
+</html>

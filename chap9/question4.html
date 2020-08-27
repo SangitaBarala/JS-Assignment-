@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>objects</title>
+</head>
+<body>
+<p>write a program that takes an array of employees, each of which is defined as a simple <br>
+JavaScript object, and prints a list for each employee showing the name, title, and salary. </p><br>
+<script>
+	<!-- var employee1= -->
+		<!-- { -->
+			<!-- name:'John', -->
+			<!-- title:'CEO', -->
+			<!-- salary:'$80,000', -->
+		<!-- } -->
+		<!-- var employee2= -->
+		<!-- { -->
+			<!-- name:'Bob', -->
+			<!-- title:'clerk', -->
+			<!-- salary:'$40,000', -->
+			
+		<!-- } -->
+		<!-- console.log(employee1) -->
+		<!-- console.log(employee2) -->
+		
+		var arr=[{name:'john', title:'CEO', salary:'$80,000'},{name:'Bob', title:'Clerk', salary:'$40,000'},{name:'Shiny', title:'Manager', salary:'$60,000'}]
+		
+		
+		for(var i=0; i<arr.length; i++)
+		{
+			
+			document.write('<br>')
+			document.write(arr[i].name+" "+'('+arr[i].title+')'+" "+arr[i].salary+"<br>")
+			
+		}
+	
+</script>
+</body>
+</html>

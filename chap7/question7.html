@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>number ordinal</title>
+</head>
+<body>
+<p> write a function createOrdinalForm(n) that returns the ordinal form of the number n as a string.<br>
+ the ordinal numbers (such as first, second, third, and fourth) are used to indicate a position in a sequence.
+ Eg: from cardinal form 1, 2 ,3, 4 to it wil give ordinal form which is 1st,2nd,3rd,4th </p>
+<script>
+	
+	function numberOrdinal(n)
+	{
+		var j=n%10
+		var k=n%100
+		if(n==0)
+		{
+			return n
+		}
+		if(j==1 && k!=11)
+		{
+			return n+"st"
+		}
+		if(j==2 && k!=12)
+		{
+			return n+"nd"
+		}
+		if(j==3 && k!=13)
+		{
+			return n+"rd"
+		}
+		return n+"th"
+	}
+	document.write(numberOrdinal(121))
+	document.write('<br>')
+	document.write(numberOrdinal(123))
+	document.write('<br>')
+	document.write(numberOrdinal(140))
+	document.write('<br>')
+	document.write(numberOrdinal(100))
+	document.write('<br>')
+	document.write(numberOrdinal(122))
+</script>
+</body>
+</html>

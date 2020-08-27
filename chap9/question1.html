@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Decimal to roman</title>
+</head>
+<body>
+<p>Return Roman equivalent of decimal integers<p>
+<script>
+function decimalRoman(value)
+{
+	var romans=['M','D','C','L','X','V','IV','I']
+	var  numbers=[1000,500,100,50,10,5,4,1]
+	var romanNum=""
+	if(value<=0 || value>=4000)
+	{
+		return value
+		
+	}
+	for(i=0; i<romans.length; i++)
+	{
+		while(value>=numbers[i])
+		{
+			romanNum+=romans[i]
+			value=value-numbers[i]
+		}
+	}
+	return romanNum
+}
+	document.write(decimalRoman(520))
+	document.write('<br>')
+	document.write(decimalRoman(55))
+	document.write('<br>')
+	document.write(decimalRoman(4))
+	document.write('<br>')
+	document.write(decimalRoman(1050))
+	document.write('<br>')
+	document.write(decimalRoman(1000))
+</script>
+</body>
+</html>

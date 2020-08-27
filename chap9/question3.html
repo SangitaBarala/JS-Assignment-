@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>letters frequency</title>
+</head>
+<body>
+<p>Write a program to count frequency of letters and letters should appear in alphabetical order.</p>
+<script>
+	function countLetters(str)
+	{
+		var tempArr=str.split("").sort().join('')
+		var letters=[]
+		var count=1
+		
+		for(i=0; i<tempArr.length; i++)
+		{
+			if(tempArr[i]==tempArr[i+1])
+			{
+				count++
+			}
+			else
+			{
+				var value=count+tempArr[i]
+				letters=letters+"  "+value
+				count=1
+			}
+		}
+		return letters
+	}
+	document.write(countLetters('hello'))
+	document.write('<br>')
+	document.write(countLetters('god'))
+	document.write('<br>')
+	document.write(countLetters('caaasstte'))
+</script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Rotate image</title>
+</head>
+<body>
+    <p>Write a program in which when we click on the image it rotates 90 degrees clock wise.</p>
+    <img src="angels.png" height=500 width=500 id="myimage" onclick="rotateImage();" alt="divine pictures" />
+</body>
+
+<script>
+    function rotateImage()
+	{
+        var img = document.getElementById('myimage');
+        img.style.transform = 'rotate(90deg)';
+    }
+</script>
+</html>

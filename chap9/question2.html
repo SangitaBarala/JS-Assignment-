@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>centimeter to feet and inches</title>
+</head>
+<body>
+<p>Write a program to convert centimeters to feet and inches</p>
+<script>
+	function centimetersToFeetAndInches(n)
+	{
+		//1 centimeter=0.394 inches
+		var inch=Math.round(n*0.394)
+		
+		// 1 feet= 12 inches
+		var feet=Math.round(inch/12)
+		
+		var inch1=inch-(feet*12)
+		
+		res=feet+' feet '+inch1+' inch'
+		return res
+	}
+	document.write(centimetersToFeetAndInches(5000))
+</script>
+</body>
+</html>

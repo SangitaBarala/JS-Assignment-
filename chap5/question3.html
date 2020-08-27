@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>permutation</title>
+</head>
+<body>
+<p>Write a function permutations(n, k) without calling the fact function. The combinations function C(n, k) determines <br>the number 
+of ways you can choose k values from a set of n elements, ignoring the order of the elements.</p><br>
+<script>
+function range(a,b)
+{
+	var prd=a
+	var i=a
+	while(i++<b)
+	{
+		prd*=i
+	}
+	return prd
+}
+function combination(n,k)
+{
+	if(n==k)
+	{
+		return 1
+	}
+	else
+	{
+		k=Math.max(k,n-k)
+		return range(k+1,n)/range(1,n-k)
+	}
+
+}
+document.write(combination(6,2))
+document.write('<br>')
+document.write(combination(8,4))
+document.write('<br>')
+document.write(combination(52,51))
+document.write('<br>')
+document.write(combination(80,3))
+</script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Random number Average</title>
+</head>
+<body>
+<p>Write a function randomAverage(n) that generates n random real numbers between 0 and 1 and then returns the average of those n values.</p>
+<p id="avg"></p>
+<script>
+	function randomAverage(n)
+	{
+		var i=1
+		var RandomSum=0
+		while(i<=n)
+		{
+			var ranNum=Math.random()*1
+			RandomSum=RandomSum+ranNum
+			i++
+		}
+	
+		return RandomSum/n
+		
+	}	
+		document.write(randomAverage(1))
+		document.write('<br>')
+		document.write(randomAverage(10))
+		document.write('<br>')
+		document.write(randomAverage(100))
+		document.write('<br>')
+		document.write(randomAverage(1000))
+		document.write('<br>')
+		document.write(randomAverage(10000))
+		document.write('<br>')
+		document.write(randomAverage(100000))
+		document.write('<br>')
+		document.write(randomAverage(1000000))
+</script>
+</body>
+</html>

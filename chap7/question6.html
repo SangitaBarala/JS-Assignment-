@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>consonant</title>
+<script>
+function consonant()
+{
+	var letter=document.getElementById('const').value
+	
+	if(letter=='a' || letter=='e' || letter=='i' || letter=='o' || letter=='u' || letter=='A' || letter=='E' || letter=='I' || letter=='O' || letter=='U')
+	{
+		document.getElementById('result').innerHTML= 'not a consonant'
+	}else
+	{
+		document.getElementById('result').innerHTML= 'it is a consonant'
+	}
+}
+</script>
+</head>
+<body>
+<h2>Implement a function to check if given input letter is consonant or not</h2>
+<input type="text" id="const">
+<button onclick="consonant()">click</button>
+<h2 id="result"></h2>
+</body>
+</html>

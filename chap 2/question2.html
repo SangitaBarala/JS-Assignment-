@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>quotient function</title>
+</head>
+<body>
+	
+	<input type="text" placeholder="enter the value of x" id="value1">
+	<input type="text" placeholder="enter the value of y" id="value2">
+	<button onclick="quotient()">check</button>
+	<p id="result"></p>
+	
+	<script>
+		function quotient()
+		{
+			var x= Number(document.getElementById('value1').value)
+			var y= Number(document.getElementById('value2').value)
+			var r= x%y
+			var quotient=(x-r)/y
+			document.getElementById('result').innerHTML= quotient
+		
+		}
+	
+	
+	</script>
+</body>
+</html>
